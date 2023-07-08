@@ -1,0 +1,23 @@
+{
+    "name": "jkniest.TheRealIronDuck",
+    "rootNamespace": "TheRealIronDuck.Runtime",
+    "references": [
+        "Unity.TextMeshPro",
+        "Zenject"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "1.0.0",
+            "define": "TMP_PRESENT"
+        }
+    ],
+    "noEngineReferences": false
+}

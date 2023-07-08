@@ -1,0 +1,16 @@
+﻿{
+  "name": "jkniest.TheRealIronDuck.Editor",
+  "rootNamespace": "TheRealIronDuck.Editor",
+  "references": [
+    "jkniest.TheRealIronDuck"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
