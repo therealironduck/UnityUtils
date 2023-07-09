@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace TheRealIronDuck.Editor.Interaction
 {
-    [UnityEditor.CustomEditor(typeof(Interactable))]
+    [CustomEditor(typeof(Interactable))]
     public class InteractableEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()

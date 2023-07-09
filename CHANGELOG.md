@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Packages
 
+## [0.2.0] - 2023-07-09
+### Added
+- `Noise` Added Noise Scriptable object with preview window
+
 ## [0.1.1] - 2023-07-09
 ### Fixed
 - `Noise` Fixed issue with wrong offset calculation
@@ -33,4 +37,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.2.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.1.1...0.2.0
 [0.1.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.1.0...0.1.1
