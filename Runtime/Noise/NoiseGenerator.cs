@@ -12,12 +12,14 @@ namespace TheRealIronDuck.Runtime.Noise
         )
         {
             var random = new System.Random(seed);
+            var randomOffset = random.Next(-100000, 100000);
+
             var octaveOffsets = new Vector2[noise.octaves];
             for (var i = 0; i < noise.octaves; i++)
             {
                 octaveOffsets[i] = new Vector2(
-                    random.Next(-100000, 100000) + offset.x,
-                    random.Next(-100000, 100000) + offset.y
+                    (randomOffset + offset.x) / noise.scale,
+                    (randomOffset + offset.y) / noise.scale
                 );
             }
 
@@ -44,8 +46,8 @@ namespace TheRealIronDuck.Runtime.Noise
 
                     for (var i = 0; i < noise.octaves; i++)
                     {
-                        var sampleX = (x-halfWidth) / scale * frequency + octaveOffsets[i].x;
-                        var sampleY = (y-halfHeight) / scale * frequency + octaveOffsets[i].y;
+                        var sampleX = (x - halfWidth) / scale * frequency + octaveOffsets[i].x;
+                        var sampleY = (y - halfHeight) / scale * frequency + octaveOffsets[i].y;
 
                         var perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
                         noiseHeight += perlinValue * amplitude;
