@@ -1,82 +1,52 @@
 ﻿using TheRealIronDuck.Runtime.Noise.Data;
 using UnityEngine;
+using Unity.Mathematics;
 
 namespace TheRealIronDuck.Runtime.Noise
 {
     public static class NoiseGenerator
     {
         public static float[,] GenerateNoiseMap(
-            NoiseData noise,
+            NoiseData data,
             int seed,
             Vector2 offset
         )
         {
+            var noiseMap = new float[data.size, data.size];
             var random = new System.Random(seed);
-            var randomOffset = random.Next(-100000, 100000);
-
-            var octaveOffsets = new Vector2[noise.octaves];
-            for (var i = 0; i < noise.octaves; i++)
+            
+            var octaveOffsets = new Vector2[data.octaves];
+            for (var i = 0; i < data.octaves; i++)
             {
-                octaveOffsets[i] = new Vector2(
-                    (randomOffset + offset.x) / noise.scale,
-                    (randomOffset + offset.y) / noise.scale
-                );
+                var offsetX = (offset.x + random.Next(-100000, 100000)) * 0.1f;
+                var offsetY = (offset.y + random.Next(-100000, 100000)) * 0.1f;
+                octaveOffsets[i] = new Vector2(offsetX, offsetY);
             }
 
-            var halfWidth = noise.size / 2f;
-            var halfHeight = noise.size / 2f;
-
-            var noiseMap = new float[noise.size, noise.size];
-            var scale = noise.scale;
-            if (scale <= 0)
+            for (var y = 0; y < data.size; y++)
             {
-                scale = 0.0001f;
-            }
-
-            var maxNoiseHeight = float.MinValue;
-            var minNoiseHeight = float.MaxValue;
-
-            for (var y = 0; y < noise.size; y++)
-            {
-                for (var x = 0; x < noise.size; x++)
+                for (var x = 0; x < data.size; x++)
                 {
                     var amplitude = 1f;
                     var frequency = 1f;
                     var noiseHeight = 0f;
 
-                    for (var i = 0; i < noise.octaves; i++)
+                    for (var i = 0; i < data.octaves; i++)
                     {
-                        var sampleX = (x - halfWidth) / scale * frequency + octaveOffsets[i].x;
-                        var sampleY = (y - halfHeight) / scale * frequency + octaveOffsets[i].y;
+                        var sampleX = (x + offset.x + octaveOffsets[i].x) * data.scale * frequency;
+                        var sampleY = (y + offset.y + octaveOffsets[i].y) * data.scale * frequency;
 
-                        var perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
-                        noiseHeight += perlinValue * amplitude;
+                        var simplexValue = noise.snoise(new float2(sampleX, sampleY));
+                        noiseHeight += simplexValue * amplitude;
 
-                        amplitude *= noise.persistence;
-                        frequency *= noise.lacunarity;
+                        amplitude *= data.persistence;
+                        frequency *= data.lacunarity;
                     }
 
-                    if (noiseHeight > maxNoiseHeight)
-                    {
-                        maxNoiseHeight = noiseHeight;
-                    }
-                    else if (noiseHeight < minNoiseHeight)
-                    {
-                        minNoiseHeight = noiseHeight;
-                    }
-
-                    noiseMap[x, y] = noiseHeight;
+                    noiseMap[x, y] = (noiseHeight + 1) / 2;
                 }
             }
-
-            for (var y = 0; y < noise.size; y++)
-            {
-                for (var x = 0; x < noise.size; x++)
-                {
-                    noiseMap[x, y] = Mathf.InverseLerp(minNoiseHeight, maxNoiseHeight, noiseMap[x, y]);
-                }
-            }
-
+            
             return noiseMap;
         }
     }
