@@ -6,5 +6,8 @@ namespace TheRealIronDuck.Runtime.Noise.Data
     public class NoiseSo : ScriptableObject
     {
         public NoiseData noiseData;
+
+        [Header("Debug Preview")] public int previewSeed = 0;
+        public Vector2 previewOffset = Vector2.zero;
     }
 }

@@ -10,7 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed
 - Fixed
 - Removed
-- Packages
+- Dependencies
+
+## [0.3.0] - 2023-07-13
+### Changed
+- `Noise` Replace perlin noise with simplex noise
+- `Noise` Add preview options (seed & offset) to the scriptable object
+
+### Dependencies
+- Add dependency to Unity.Mathematics
 
 ## [0.2.0] - 2023-07-09
 ### Added
@@ -37,5 +45,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.3.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.1.1...0.2.0
 [0.1.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.1.0...0.1.1

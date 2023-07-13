@@ -3,7 +3,8 @@
     "rootNamespace": "TheRealIronDuck.Runtime",
     "references": [
         "Unity.TextMeshPro",
-        "Zenject"
+        "Zenject",
+        "Unity.Mathematics"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -17,6 +18,11 @@
             "name": "com.unity.textmeshpro",
             "expression": "1.0.0",
             "define": "TMP_PRESENT"
+        },
+        {
+            "name": "com.unity.mathematics",
+            "expression": "1.0.0",
+            "define": "UNITY_MATHEMATICS_PACKAGE"
         }
     ],
     "noEngineReferences": false

@@ -12,16 +12,17 @@ namespace TheRealIronDuck.Editor.Noise
 
         public override void OnPreviewGUI(Rect r, GUIStyle background)
         {
-            var noise = (target as NoiseSo)?.noiseData;
-            if (noise == default)
+            var so = (target as NoiseSo);
+            var noise = so?.noiseData;
+            if (so == default || noise == default)
             {
                 return;
             }
             
             var noiseMap = NoiseGenerator.GenerateNoiseMap(
                 noise,
-                0,
-                Vector2.zero
+                so.previewSeed,
+                so.previewOffset
             );
 
             var colors = new Color[noise.size * noise.size];
