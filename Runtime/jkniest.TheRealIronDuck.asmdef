@@ -6,7 +6,8 @@
         "Zenject",
         "Unity.Mathematics",
         "Unity.Netcode.Runtime",
-        "Unity.Netcode.Components"
+        "Unity.Netcode.Components",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -30,6 +31,11 @@
             "name": "com.unity.netcode.gameobjects",
             "expression": "1.0.0",
             "define": "THEREALIRONDUCK_NETWORKING"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "THEREALIRONDUCK_NEW_INPUT"
         }
     ],
     "noEngineReferences": false
