@@ -12,6 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.4.0] - 2023-07-15
+### Fixed
+- Fixed netcode for gameobjects reference missing in assembly file
+
+### Dependencies
+- Make Unity.Mathematics a real dependency (was missing in package.json file)
+- Automatically detect if netcode for gameobjects is installed
+
 ## [0.3.0] - 2023-07-13
 ### Changed
 - `Noise` Replace perlin noise with simplex noise
