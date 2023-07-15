@@ -4,7 +4,10 @@
     "references": [
         "Unity.TextMeshPro",
         "Zenject",
-        "Unity.Mathematics"
+        "Unity.Mathematics",
+        "Unity.Netcode.Runtime",
+        "Unity.Netcode.Components",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -23,6 +26,16 @@
             "name": "com.unity.mathematics",
             "expression": "1.0.0",
             "define": "UNITY_MATHEMATICS_PACKAGE"
+        },
+        {
+            "name": "com.unity.netcode.gameobjects",
+            "expression": "1.0.0",
+            "define": "THEREALIRONDUCK_NETWORKING"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "THEREALIRONDUCK_NEW_INPUT"
         }
     ],
     "noEngineReferences": false
