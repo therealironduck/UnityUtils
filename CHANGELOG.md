@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.4.1] - 2023-07-15
+### Fixed
+- Fixed wrong dependency version constraint in package.json
+
 ## [0.4.0] - 2023-07-15
 ### Added
 - `Helper` Add support for new input system to camera helper 
@@ -56,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.4.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.1.1...0.2.0
