@@ -1,6 +1,6 @@
 ﻿using TheRealIronDuck.Runtime.SceneManagement.Data;
+using UniDi;
 using UnityEngine;
-using Zenject;
 
 namespace TheRealIronDuck.Runtime.SceneManagement.Components
 {

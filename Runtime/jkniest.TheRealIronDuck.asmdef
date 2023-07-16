@@ -3,11 +3,11 @@
     "rootNamespace": "TheRealIronDuck.Runtime",
     "references": [
         "Unity.TextMeshPro",
-        "Zenject",
         "Unity.Mathematics",
         "Unity.Netcode.Runtime",
         "Unity.Netcode.Components",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "UniDi.UniDi"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
