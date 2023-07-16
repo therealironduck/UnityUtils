@@ -1,6 +1,6 @@
 ﻿using TheRealIronDuck.Runtime.Popup.Components;
+using UniDi;
 using UnityEngine;
-using Zenject;
 
 namespace TheRealIronDuck.Runtime.Popup.Systems
 {

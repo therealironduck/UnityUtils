@@ -6,7 +6,7 @@ This unity package contains a lot of utility methods, helper and classes which I
 
 ## Installation
 
-> **Caution: This package requires [Extenject](https://github.com/Mathijs-Bakker/Extenject)!**
+> **Caution: This package requires [UniDi](https://github.com/UniDi/UniDi)!**
 
 You can install this package using the unity package manager by added it as a git repository.
 
@@ -16,7 +16,7 @@ In unity:
 - Enter `git@github.com:therealironduck/UnityUtils.git`
 - Press enter!
 
-Afterwards you should add the `TheRealIronDuckInstaller` to your extenject project context. Please consult the [Extenject Documentation](https://github.com/Mathijs-Bakker/Extenject) for further information.
+Afterwards you should add the `TheRealIronDuckInstaller` to your extenject project context. Please consult the [UniDi Documentation](https://github.com/UniDi/unidi.github.io/blob/master/docs/index.md) for further information.
 ## Features
 
 ### Helper

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using TheRealIronDuck.Runtime.SceneManagement.Data;
+using UniDi;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Zenject;
 #if THEREALIRONDUCK_NETWORKING
 using Unity.Netcode;
 #endif
