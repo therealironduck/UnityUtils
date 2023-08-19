@@ -29,6 +29,9 @@ A simple component which does excatly as it is called. It has a public method `R
 gameObject.GetComponent<RemoveAllChildren>().RemoveAll();
 ```
 
+#### Rotate
+A simple component which rotates a transform around a given axis with a given speed.
+
 
 #### DictionaryExtensions
 A simple dictionary extension to get a random key-value-pair.
