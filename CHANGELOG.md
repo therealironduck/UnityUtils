@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.7.0] - 2023-08-19
+### Added
+- `Helper` Added a rotate component
+
 ## [0.6.0] - 2023-08-18
 ### Added
 - `Network` Added a ClientNetworkTransform component
@@ -68,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.7.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.4.1...0.5.0
 [0.4.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.4.0...0.4.1
