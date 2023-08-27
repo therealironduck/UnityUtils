@@ -1,4 +1,5 @@
-﻿using TheRealIronDuck.Runtime.SceneManagement.Components;
+﻿using TheRealIronDuck.Runtime.Helper.Systems;
+using TheRealIronDuck.Runtime.SceneManagement.Components;
 using UniDi;
 using UnityEngine;
 
@@ -22,6 +23,8 @@ namespace TheRealIronDuck.Runtime
 
             Container.Bind<Popup.Systems.Popup>().AsSingle();
             Container.Bind<GameObject>().WithId("TheRealIronDuck_PopupPrefab").FromInstance(popupPrefab);
+
+            Container.BindInterfacesAndSelfTo<Ticker>().AsSingle();
         }
     }
 }

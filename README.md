@@ -32,7 +32,6 @@ gameObject.GetComponent<RemoveAllChildren>().RemoveAll();
 #### Rotate
 A simple component which rotates a transform around a given axis with a given speed.
 
-
 #### DictionaryExtensions
 A simple dictionary extension to get a random key-value-pair.
 
@@ -42,14 +41,12 @@ var randomKeyValuePair = myDictionary.RandomItem();
 Debug.Log(randomKeyValuePair.key, randomKeyValuePair.value);
 ```
 
-
 #### CameraHelper
 This static class has a simple method to get the world-position of the mouse using a raycast from a given camera.
 
 ```csharp
 var position = CameraHelper.RayFromMouseToGround(myCamera, myGroundLayerMask);
 ```
-
 
 #### VectorHelper
 The static VectorHelper class has a few methods to work with vectors:
@@ -73,6 +70,21 @@ It returns the normalized direction vector between two given points.
 
 ```csharp
 var direction = VectorHelper.GetDirectionVectorBetweenPoints(Vector3.one, Vector3.zero);
+```
+
+#### Ticker
+A simple class which allows any other class to run logic every frame or every second.
+
+```csharp
+
+[Inject] private readonly Ticker _ticker;
+
+private void Start()
+{
+    _ticker.OnTickFrame.AddListener(OnTickFrame);
+    _ticker.OnTickSecond.AddListener(OnTickFrame);
+}
+
 ```
 
 
