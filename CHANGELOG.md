@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Added
 - `Screenshot` Added component and prefab to take transparent screenshots
+- `Helper` Added ticker system to allow any class to run logic on every frame or every second
 
 ## [0.7.1] - 2023-08-20
 ### Fixed
