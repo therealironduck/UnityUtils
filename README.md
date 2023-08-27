@@ -91,6 +91,26 @@ interactable.OnInteractExit.AddListener(OnInteractExit);
 
 ```
 
+
+### Screenshot
+This package contains a simple screenshot taker. It can be used to take screenshots and store them in the assets directory.
+Main use would be to generate transparent icons for your 3d models.
+
+The package comes with a camera prefab attaches, so you can directly start using it. If you don't want to use the included
+camera, you can use your one. Just make sure that the Environment background is set to "Solid color" and alpha is at 0.
+
+Just attach the component `ScreenshotTaker` to any game object and you can create screenshots
+directly from within the inspector.
+
+Otherwise this is how you can manually trigger a screenshot:
+
+```csharp
+var screenshotTaker = GetComponent<ScreenshotTaker>();
+
+screenshotTaker.Capture();
+```
+
+
 ### ToDo for documentation
 - LoadingScreen
 - Network
