@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
-## Unreleased
+## [0.8.0] - 2023-08-27
 ### Added
 - `Screenshot` Added component and prefab to take transparent screenshots
 - `Helper` Added ticker system to allow any class to run logic on every frame or every second
@@ -81,6 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.8.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.7.1...0.8.0
 [0.7.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.5.0...0.6.0
