@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## Unreleased
+### Added
+- `Screenshot` Added component and prefab to take transparent screenshots
+
 ## [0.7.1] - 2023-08-20
 ### Fixed
 - Fixed issue with editor assembly (only load the assembly in editor and not builds)
