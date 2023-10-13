@@ -18,11 +18,12 @@ namespace TheRealIronDuck.Editor.Noise
             {
                 return;
             }
-            
+
             var noiseMap = NoiseGenerator.GenerateNoiseMap(
                 noise,
                 so.previewSeed,
-                so.previewOffset
+                so.previewOffset,
+                ! so.previewHideFalloff
             );
 
             var colors = new Color[noise.size * noise.size];
