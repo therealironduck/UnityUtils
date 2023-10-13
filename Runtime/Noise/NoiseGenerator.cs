@@ -9,7 +9,8 @@ namespace TheRealIronDuck.Runtime.Noise
         public static float[,] GenerateNoiseMap(
             NoiseData data,
             int seed,
-            Vector2 offset
+            Vector2 offset,
+            bool enableFalloff = true
         )
         {
             var noiseMap = new float[data.size, data.size];
@@ -47,13 +48,36 @@ namespace TheRealIronDuck.Runtime.Noise
                 }
             }
 
+            if (!enableFalloff)
+            {
+                return noiseMap;
+            }
+
+            var centerX = data.size / 2f - offset.x;
+            var centerY = data.size / 2f - offset.y;
+            for (var y = 0; y < data.size; y++)
+            {
+                for (var x = 0; x < data.size; x++)
+                {
+                    var distance = Mathf.Sqrt(Mathf.Pow(x - centerX, 2) + Mathf.Pow(y - centerY, 2));
+                    var normalizedDistance = Mathf.Clamp01(distance / data.falloffRange);
+                    var falloff = 1 - Mathf.Pow(normalizedDistance, 2);
+
+                    if (distance < data.falloffRange)
+                    {
+                        noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] + falloff);
+                    }
+                }
+            }
+
             return noiseMap;
         }
 
         public static float GenerateNoiseValue(
             NoiseData data,
             int seed,
-            Vector2 position
+            Vector2 position,
+            bool enableFalloff = true
         )
         {
             var random = new System.Random(seed);
@@ -82,7 +106,25 @@ namespace TheRealIronDuck.Runtime.Noise
                 frequency *= data.lacunarity;
             }
 
-            return (noiseHeight + 1) / 2;
+            var noiseValue = (noiseHeight + 1) / 2;
+            
+            if (!enableFalloff)
+            {
+                return noiseValue;
+            }
+
+            var centerX = data.size / 2f - position.x;
+            var centerY = data.size / 2f - position.y;
+            var distance = Mathf.Sqrt(Mathf.Pow(centerX, 2) + Mathf.Pow(centerY, 2));
+            var normalizedDistance = Mathf.Clamp01(distance / data.falloffRange);
+            var falloff = 1 - Mathf.Pow(normalizedDistance, 2);
+
+            if (distance < data.falloffRange)
+            {
+                noiseValue = Mathf.Clamp01(noiseValue + falloff);
+            }
+             
+            return noiseValue;
         }
     }
 }
