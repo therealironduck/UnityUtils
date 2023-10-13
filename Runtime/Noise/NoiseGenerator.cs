@@ -14,7 +14,7 @@ namespace TheRealIronDuck.Runtime.Noise
         {
             var noiseMap = new float[data.size, data.size];
             var random = new System.Random(seed);
-            
+
             var octaveOffsets = new Vector2[data.octaves];
             for (var i = 0; i < data.octaves; i++)
             {
@@ -46,8 +46,43 @@ namespace TheRealIronDuck.Runtime.Noise
                     noiseMap[x, y] = (noiseHeight + 1) / 2;
                 }
             }
-            
+
             return noiseMap;
+        }
+
+        public static float GenerateNoiseValue(
+            NoiseData data,
+            int seed,
+            Vector2 position
+        )
+        {
+            var random = new System.Random(seed);
+
+            var octaveOffsets = new Vector2[data.octaves];
+            for (var i = 0; i < data.octaves; i++)
+            {
+                var offsetX = (position.x + random.Next(-100000, 100000)) * 0.1f;
+                var offsetY = (position.y + random.Next(-100000, 100000)) * 0.1f;
+                octaveOffsets[i] = new Vector2(offsetX, offsetY);
+            }
+
+            var amplitude = 1f;
+            var frequency = 1f;
+            var noiseHeight = 0f;
+
+            for (var i = 0; i < data.octaves; i++)
+            {
+                var sampleX = (position.x + octaveOffsets[i].x) * data.scale * frequency;
+                var sampleY = (position.y + octaveOffsets[i].y) * data.scale * frequency;
+
+                var simplexValue = noise.snoise(new float2(sampleX, sampleY));
+                noiseHeight += simplexValue * amplitude;
+
+                amplitude *= data.persistence;
+                frequency *= data.lacunarity;
+            }
+
+            return (noiseHeight + 1) / 2;
         }
     }
 }

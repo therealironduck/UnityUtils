@@ -6,7 +6,7 @@ This unity package contains a lot of utility methods, helper and classes which I
 
 ## Installation
 
-> **Caution: This package requires [UniDi](https://github.com/UniDi/UniDi)!**
+> **Caution: This package requires [UniDi](https://github.com/UniDi/UniDi) and [UniDi Signals](https://github.com/UniDi/UniDi-Signals)!**
 
 You can install this package using the unity package manager by added it as a git repository.
 

@@ -12,6 +12,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.9.0] - 2023-10-13
+### Added
+- `Noise` Added static method to generate a single noise value `NoiseGenerator.GenerateNoiseValue`
+
+### Changed
+- Install the signal bus in the RealIronDuckInstaller 
+- ScreenshotCamera prefab now has no audio listener by default
+
+### Dependencies
+- This package now requires [UniDi Signals](https://github.com/UniDi/UniDi-Signals.git)
+
 ## [0.8.0] - 2023-08-27
 ### Added
 - `Screenshot` Added component and prefab to take transparent screenshots
@@ -81,6 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.9.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.7.1...0.8.0
 [0.7.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.6.0...0.7.0

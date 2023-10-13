@@ -13,6 +13,8 @@ namespace TheRealIronDuck.Runtime
 
         public override void InstallBindings()
         {
+            SignalBusInstaller.Install(Container);
+            
             Container.Bind(typeof(LoadingFadeEffect), typeof(LoadingSceneManager))
                 .FromComponentInNewPrefab(loadingScenePrefab)
                 .AsSingle();
