@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.11.0] - 2023-10-25
 ### Added
 - `Helper` Added method to get the hit target using a raycast to the CameraHelper
+- `Helper` Added half second interval to ticker
 - `Types` Added attribute to validate that a gameobject has a specific component
 
 ### Dependencies
@@ -104,6 +105,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.11.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.9.0...0.10.0
 [0.9.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.7.1...0.8.0

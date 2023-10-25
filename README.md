@@ -42,10 +42,12 @@ Debug.Log(randomKeyValuePair.key, randomKeyValuePair.value);
 ```
 
 #### CameraHelper
-This static class has a simple method to get the world-position of the mouse using a raycast from a given camera.
+This static class has two simple methods to get the world-position or object of the mouse using a raycast from a given camera.
 
 ```csharp
 var position = CameraHelper.RayFromMouseToGround(myCamera, myGroundLayerMask);
+
+var target = CameraHelper.RayFromMouseToTarget(myCamera, myGroundLayerMask);
 ```
 
 #### VectorHelper
@@ -73,7 +75,7 @@ var direction = VectorHelper.GetDirectionVectorBetweenPoints(Vector3.one, Vector
 ```
 
 #### Ticker
-A simple class which allows any other class to run logic every frame or every second.
+A simple class which allows any other class to run logic every frame, every half-second or every second.
 
 ```csharp
 
@@ -82,7 +84,8 @@ A simple class which allows any other class to run logic every frame or every se
 private void Start()
 {
     _ticker.OnTickFrame.AddListener(OnTickFrame);
-    _ticker.OnTickSecond.AddListener(OnTickFrame);
+    _ticker.OnTickHalfSecond.AddListener(OnTickHalfSecond);
+    _ticker.OnTickSecond.AddListener(OnTickSecond);
 }
 
 ```
@@ -124,6 +127,7 @@ screenshotTaker.Capture();
 
 
 ### ToDo for documentation
+- HasComponent attribute
 - LoadingScreen
 - Network
 - Noise
