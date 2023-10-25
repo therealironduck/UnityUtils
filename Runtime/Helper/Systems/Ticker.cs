@@ -10,12 +10,14 @@ namespace TheRealIronDuck.Runtime.Helper.Systems
 
         public readonly UnityEvent OnTickFrame = new();
         public readonly UnityEvent OnTickSecond = new();
+        public readonly UnityEvent OnTickHalfSecond = new();
 
         #endregion
 
         #region VARIABLES
 
         private float _secondTimer;
+        private float _halfSecondTimer;
 
         #endregion
 
@@ -26,13 +28,19 @@ namespace TheRealIronDuck.Runtime.Helper.Systems
             OnTickFrame?.Invoke();
             
             _secondTimer -= Time.deltaTime;
-            if (_secondTimer > 0)
-            {
-                return;
-            }
+            _halfSecondTimer -= Time.deltaTime;
             
-            _secondTimer = 1;
-            OnTickSecond?.Invoke();
+            if (_secondTimer <= 0)
+            {
+                _secondTimer = 1;
+                OnTickSecond?.Invoke();
+            }
+
+            if (_halfSecondTimer <= 0)
+            {
+                _halfSecondTimer = .5f;
+                OnTickHalfSecond?.Invoke();
+            }
         }
 
         #endregion

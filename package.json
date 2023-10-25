@@ -1,6 +1,6 @@
 ﻿{
   "name": "de.jkniest.therealironduck",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Some utility classes I like to use in my games",
   "displayName": "TheRealIronDuck Utilities",
   "unity": "2022.1",
