@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.11.0] - 2023-10-25
+### Added
+- `Helper` Added method to get the hit target using a raycast to the CameraHelper
+
 ## [0.10.0] - 2023-10-14
 ### Added
 - `Noise` Added option to configure falloff values for noises 
