@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 #if THEREALIRONDUCK_NEW_INPUT
 using UnityEngine.InputSystem;
 #endif
@@ -24,6 +25,18 @@ namespace TheRealIronDuck.Runtime.Helper
             return hit.point;
         }
 
-        #endregion
+        [CanBeNull]
+        public static Transform RayFromMouseToTarget(Camera camera, LayerMask layerMask)
+        {
+#if THEREALIRONDUCK_NEW_INPUT
+            var ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+#else
+            var ray = camera.ScreenPointToRay(Input.mousePosition);
+#endif
+
+            return Physics.Raycast(ray, out var hit, 1000f, layerMask) ? hit.transform : null;
+        }
+
+        #endregion 
     }
 }
