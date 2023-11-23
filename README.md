@@ -74,39 +74,6 @@ It returns the normalized direction vector between two given points.
 var direction = VectorHelper.GetDirectionVectorBetweenPoints(Vector3.one, Vector3.zero);
 ```
 
-#### Ticker
-A simple class which allows any other class to run logic every frame, every half-second or every second.
-
-```csharp
-
-[Inject] private readonly Ticker _ticker;
-
-private void Start()
-{
-    _ticker.OnTickFrame.AddListener(OnTickFrame);
-    _ticker.OnTickHalfSecond.AddListener(OnTickHalfSecond);
-    _ticker.OnTickSecond.AddListener(OnTickSecond);
-}
-
-```
-
-
-### Interaction
-A simple interaction handler is integrated into this package. Yoz can given any gameobject with a Trigger collider the `Interactable` component. The player requires the `Interactor` component.
-
-The interactable component throws events based on if the interaction status.
-
-```csharp
-
-var interactable = GetComponent<Interactable>();
-
-interactable.OnInteract.AddListener(OnInteract);
-interactable.OnInteractEnter.AddListener(OnInteractEnter);
-interactable.OnInteractExit.AddListener(OnInteractExit);
-
-```
-
-
 ### Screenshot
 This package contains a simple screenshot taker. It can be used to take screenshots and store them in the assets directory.
 Main use would be to generate transparent icons for your 3d models.
@@ -128,11 +95,7 @@ screenshotTaker.Capture();
 
 ### ToDo for documentation
 - HasComponent attribute
-- LoadingScreen
-- Network
 - Noise
-- Popup
-- SceneManagement
 - Types
 
 ## License

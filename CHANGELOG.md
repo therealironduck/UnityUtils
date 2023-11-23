@@ -12,6 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.12.0] - 2023-11-23
+### Removed
+- `Helper` Removed the ticker system
+- `Interaction` Removed the interaction system
+- `LoadingScreen` Removed the loading screen system
+- `Network` Removed the network system
+- `Popup` Removed the popup system
+- `SceneManagement` Removed the scene management system
+- Removed TheRealIronDuckInstaller
+
+### Dependencies
+- Removed dependency for UniDi & UniDi Signals
+
 ## [0.11.0] - 2023-10-25
 ### Added
 - `Helper` Added method to get the hit target using a raycast to the CameraHelper
@@ -105,6 +118,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.12.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.11.0...0.12.0
 [0.11.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.9.0...0.10.0
 [0.9.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.8.0...0.9.0
