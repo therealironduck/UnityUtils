@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## Unreleased
+### Added
+- `Types` Added attribute to validate that a list is not empty (requires Odin Validator)
+
 ## [0.12.0] - 2023-11-23
 ### Removed
 - `Helper` Removed the ticker system
@@ -29,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `Helper` Added method to get the hit target using a raycast to the CameraHelper
 - `Helper` Added half second interval to ticker
-- `Types` Added attribute to validate that a gameobject has a specific component
+- `Types` Added attribute to validate that a gameobject has a specific component (requires Odin Validator)
 
 ### Dependencies
 - Added support for Odin Validator (not required)

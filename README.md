@@ -6,8 +6,6 @@ This unity package contains a lot of utility methods, helper and classes which I
 
 ## Installation
 
-> **Caution: This package requires [UniDi](https://github.com/UniDi/UniDi) and [UniDi Signals](https://github.com/UniDi/UniDi-Signals)!**
-
 You can install this package using the unity package manager by added it as a git repository.
 
 In unity:
@@ -16,7 +14,6 @@ In unity:
 - Enter `git@github.com:therealironduck/UnityUtils.git`
 - Press enter!
 
-Afterwards you should add the `TheRealIronDuckInstaller` to your extenject project context. Please consult the [UniDi Documentation](https://github.com/UniDi/unidi.github.io/blob/master/docs/index.md) for further information.
 ## Features
 
 ### Helper
@@ -92,9 +89,34 @@ var screenshotTaker = GetComponent<ScreenshotTaker>();
 screenshotTaker.Capture();
 ```
 
+### Custom Odin Validator Attributes
+
+> This requires the [Odin Validator](https://odininspector.com/odin-validator) package to be installed.
+
+#### HasComponent
+The `HasComponent` attribute can be used to validate if a component is attached to a game object. It can be used on fields, properties and methods.
+
+```csharp
+public class MyComponent : MonoBehaviour
+{
+    [HasComponent(typeof(Rigidbody))]
+    public GameObject someObjectThatMustHaveARigidbody;
+}
+```
+
+#### NotEmpty
+The `NotEmpty` attribute can be used to validate if a collection/array is not empty. It can be used on fields.
+
+```csharp
+public class MyComponent : MonoBehaviour
+{
+    [NotEmpty]
+    public GameObject[] gameObjects;
+}
+```
+
 
 ### ToDo for documentation
-- HasComponent attribute
 - Noise
 - Types
 
