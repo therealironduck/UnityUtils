@@ -12,9 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
-## Unreleased
+## [0.13.0] - 2024-11-09
 ### Added
 - `Types` Added attribute to validate that a list is not empty (requires Odin Validator)
+- `Helper` Added extension method to shuffle a queue
 
 ## [0.12.0] - 2023-11-23
 ### Removed
@@ -122,6 +123,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.13.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.11.0...0.12.0
 [0.11.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.9.0...0.10.0
