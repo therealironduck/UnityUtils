@@ -38,6 +38,20 @@ var randomKeyValuePair = myDictionary.RandomItem();
 Debug.Log(randomKeyValuePair.key, randomKeyValuePair.value);
 ```
 
+#### QueueExtensions
+A simple queue extension to shuffle the queue.
+
+```csharp
+var queue = new Queue<int>();
+queue.Enqueue(1);
+queue.Enqueue(2);
+queue.Enqueue(3);
+queue.Shuffle();
+
+Debug.Log(queue.Dequeue());
+Debug.Log(queue.Dequeue());
+```
+
 #### CameraHelper
 This static class has two simple methods to get the world-position or object of the mouse using a raycast from a given camera.
 
