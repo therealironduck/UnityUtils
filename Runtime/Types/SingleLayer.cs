@@ -30,7 +30,12 @@ namespace TheRealIronDuck.Runtime.Types
         /// </summary>
         public int Mask
         {
-            get { return 1 << LayerIndex; }
+            get
+            {
+                if (LayerIndex < 0 || LayerIndex > 31)
+                    return 0;
+                return 1 << LayerIndex;
+            }
         }
     }
 }
