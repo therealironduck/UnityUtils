@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.15.0] - 2026-05-17
+### Added
+- `Types` Added SingleLayer type to select a single layer
+
 ## [0.14.0] - 2026-02-23
 ### Added
 - `Types` Added attribute to validate that a inspectable type is not null.
@@ -127,6 +131,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.15.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.11.0...0.12.0

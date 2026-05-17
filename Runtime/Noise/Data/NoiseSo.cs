@@ -7,7 +7,7 @@ namespace TheRealIronDuck.Runtime.Noise.Data
     {
         public NoiseData noiseData;
 
-        [Header("Debug Preview")] public int previewSeed = 0;
+        [Header("Debug Preview")] public int previewSeed;
         public Vector2 previewOffset = Vector2.zero;
         public bool previewHideFalloff;
     }
