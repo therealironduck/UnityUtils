@@ -26,7 +26,7 @@ namespace TheRealIronDuck.Runtime.Helper
         }
 
         [CanBeNull]
-        public static Transform RayFromMouseToTarget(Camera camera, LayerMask layerMask)
+        public static Transform RayFromMouseToTarget(Camera camera, LayerMask layerMask, float maxDistance = 1000f)
         {
 #if THEREALIRONDUCK_NEW_INPUT
             var ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -34,7 +34,7 @@ namespace TheRealIronDuck.Runtime.Helper
             var ray = camera.ScreenPointToRay(Input.mousePosition);
 #endif
 
-            return Physics.Raycast(ray, out var hit, 1000f, layerMask) ? hit.transform : null;
+            return Physics.Raycast(ray, out var hit, maxDistance, layerMask) ? hit.transform : null;
         }
 
         #endregion 
