@@ -134,6 +134,13 @@ public class MyComponent : MonoBehaviour
 - Noise
 - Types
 
+## Other Assets
+
+These are assets I use in most of my projects, but are licensed in the asset store or made by someone else. So just want
+to mark them down here:
+
+- [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488) by Chris Nolet
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

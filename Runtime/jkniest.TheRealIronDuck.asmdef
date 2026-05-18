@@ -2,12 +2,9 @@
     "name": "jkniest.TheRealIronDuck",
     "rootNamespace": "TheRealIronDuck.Runtime",
     "references": [
-        "Unity.TextMeshPro",
         "Unity.Mathematics",
-        "Unity.Netcode.Runtime",
-        "Unity.Netcode.Components",
         "Unity.InputSystem",
-        "UniDi.UniDi"
+        "Unity.RenderPipelines.Core.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -17,21 +14,6 @@
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [
-        {
-            "name": "com.unity.textmeshpro",
-            "expression": "1.0.0",
-            "define": "TMP_PRESENT"
-        },
-        {
-            "name": "com.unity.mathematics",
-            "expression": "1.0.0",
-            "define": "UNITY_MATHEMATICS_PACKAGE"
-        },
-        {
-            "name": "com.unity.netcode.gameobjects",
-            "expression": "1.0.0",
-            "define": "THEREALIRONDUCK_NETWORKING"
-        },
         {
             "name": "com.unity.inputsystem",
             "expression": "1.0.0",
