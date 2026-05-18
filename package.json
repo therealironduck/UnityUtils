@@ -1,15 +1,15 @@
 ﻿{
-  "name": "de.jkniest.therealironduck",
-  "version": "0.15.0",
-  "description": "Some utility classes I like to use in my games",
-  "displayName": "TheRealIronDuck Utilities",
-  "unity": "2022.1",
-  "author": {
-    "name": "Jordan Kniest",
-    "email": "mail@jkniest.de"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "com.unity.mathematics": "1.0.0"
-  }
+	"name": "de.jkniest.therealironduck",
+	"version": "0.16.1",
+	"description": "Some utility classes I like to use in my games",
+	"displayName": "TheRealIronDuck Utilities",
+	"unity": "2022.1",
+	"author": {
+		"name": "Jordan Kniest",
+		"email": "mail@jkniest.de"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"com.unity.mathematics": "1.0.0"
+	}
 }

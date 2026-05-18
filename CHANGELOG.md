@@ -12,10 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed
 - Dependencies
 
+## [0.16.1] - 2026-05-18
+### Fixedj
+- Forgot to change the version number in `package.json`
+
 ## [0.16.0] - 2026-05-18
 ### Added
 - `Helper` Added VolumeHelper which contains a function to crossfade between two volumes
- 
+
 ### Changed
 - `Helper` Add maxDistance parameter to `CameraHelper.RayFromMouseToTarget` method 
 - Cleanup `TheRealIronDuck.Runtime` assembly dependencies
@@ -139,6 +143,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SceneManagement` Added a scene loading manager to load scenes with a nice fade effect
 - `Types` Added a referencable and serializable type field to select a C# class
 
+[0.16.1]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.16.0...0.16.1
 [0.16.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.15.0...0.16.0
 [0.15.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/TheRealIronDuck/UnityUtils/compare/0.13.0...0.14.0
