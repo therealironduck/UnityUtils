@@ -14,6 +14,10 @@ namespace TheRealIronDuck.Runtime.Helper
         /// <param name="duration">Total time for transition</param>
         public static IEnumerator CrossfadeVolumes(Volume a, Volume b, float duration)
         {
+            if (a == null) throw new System.ArgumentNullException(nameof(a));
+            if (b == null) throw new System.ArgumentNullException(nameof(b));
+            if (duration < 0f) throw new System.ArgumentOutOfRangeException(nameof(duration), "Duration must be >= 0.");
+
             var elapsed = 0f;
 
             while (elapsed < duration)
