@@ -7,11 +7,11 @@ namespace TheRealIronDuck.Runtime.Screenshot.Components
     {
         #region EXPOSED FIELDS
 
-        [SerializeField] private string imageName = "MyScreenshot";
-        [SerializeField] [Min(1)] private int width = 256;
-        [SerializeField] [Min(1)] private int height = 256;
+        [SerializeField] string imageName = "MyScreenshot";
+        [SerializeField] [Min(1)] int width = 256;
+        [SerializeField] [Min(1)] int height = 256;
 
-        [SerializeField] private Camera captureCamera;
+        [SerializeField] Camera captureCamera;
 
         #endregion
 

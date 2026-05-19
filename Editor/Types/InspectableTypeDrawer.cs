@@ -10,10 +10,10 @@ namespace TheRealIronDuck.Editor.Types
     public class InspectableTypeDrawer : PropertyDrawer
     {
         #region VARIABLES
-        
-        private Type[] _derivedTypes;
-        private GUIContent[] _optionLabels;
-        private int _selectedIndex;
+
+        Type[] _derivedTypes;
+        GUIContent[] _optionLabels;
+        int _selectedIndex;
         
         #endregion
 
@@ -58,8 +58,8 @@ namespace TheRealIronDuck.Editor.Types
         #endregion
 
         #region PRIVATE METHODS
-        
-        private void Initialize(SerializedProperty property, SerializedProperty stored)
+
+        void Initialize(SerializedProperty property, SerializedProperty stored)
         {
             var baseTypeProperty = property.FindPropertyRelative("baseTypeName");
             var baseType = Type.GetType(baseTypeProperty.stringValue);
@@ -83,7 +83,7 @@ namespace TheRealIronDuck.Editor.Types
             UpdateIndex(stored);
         }
 
-        private void UpdateIndex(SerializedProperty stored)
+        void UpdateIndex(SerializedProperty stored)
         {
             var qualifiedName = stored.stringValue;
 
@@ -102,7 +102,7 @@ namespace TheRealIronDuck.Editor.Types
             stored.stringValue = "null";
         }
 
-        private static Type[] FindAllDerivedTypes(Type baseType)
+        static Type[] FindAllDerivedTypes(Type baseType)
         {
             return baseType.Assembly.GetTypes().Where(
                 t => t != baseType && baseType.IsAssignableFrom(t)

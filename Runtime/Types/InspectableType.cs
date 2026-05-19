@@ -11,17 +11,17 @@ namespace TheRealIronDuck.Runtime.Types
     {
         #region EXPOSED FIELDS
 
-        [SerializeField] private string qualifiedName;
+        [SerializeField] string qualifiedName;
 
 #if UNITY_EDITOR
-        [SerializeField] private string baseTypeName;
+        [SerializeField] string baseTypeName;
 #endif
 
         #endregion
 
         #region VARIABLES
 
-        private Type _storedType;
+        Type _storedType;
 
         #endregion
 
