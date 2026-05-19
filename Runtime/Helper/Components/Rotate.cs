@@ -6,13 +6,13 @@ namespace TheRealIronDuck.Runtime.Helper.Components
     {
         #region EXPOSED FIELDS
 
-        [SerializeField] private Vector3 rotationSpeed;
+        [SerializeField] Vector3 rotationSpeed;
 
         #endregion
 
         #region LIFECYCLE METHODS
 
-        private void Update()
+        void Update()
         {
             transform.Rotate(rotationSpeed * Time.deltaTime);
         }
